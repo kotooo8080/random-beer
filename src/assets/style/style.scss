@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Inconsolata', monospace;
+}
+
+.main-page {
+    .page-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+
+        h1 {
+            margin: 0;
+            margin-left: 32px;
+            margin-right: 16px;
+            color: #f2a13c;
+        }
+    }
+
+    .page-info {
+        display: flex;
+        flex-direction: row;
+        width: calc(100% - 64px);
+        justify-content: space-evenly;
+        padding: 16px 32px;
+
+        .user-data {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+
+            h3 {
+                margin: 0;
+                margin-bottom: 16px;
+            }
+
+            .block-name {
+                overflow: hidden;
+                border-right: .15em solid #f2a13c;
+                white-space: nowrap;
+                animation: typing 1.5s steps(20, end) forwards, blinking 1.8s infinite;
+                width: 0;
+            }
+              
+            @keyframes typing {
+                from { width:  0}
+                to { width: 115px }
+            }
+              
+            @keyframes blinking {
+                from { border-color: transparent }
+                to { border-color: #f2a13c; }
+            }
+
+            .random-user {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                width: 100%;
+                height: 300px;
+                border: 2px solid #f2a13c;
+                border-radius: 5px;
+
+                .img-box {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40%;
+                }
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                #circles {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                .circles {
+                    background-color:rgb(255,255,255);
+                    float: left;
+
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+
+                    animation-name: bounce_circleG;
+                        -o-animation-name: bounce_circle;
+                        -ms-animation-name: bounce_circle;
+                        -webkit-animation-name: bounce_circle;
+                        -moz-animation-name: bounce_circle;
+
+                    animation-duration: 2.24s;
+                        -o-animation-duration: 2.24s;
+                        -ms-animation-duration: 2.24s;
+                        -webkit-animation-duration: 2.24s;
+                        -moz-animation-duration: 2.24s;
+
+                    animation-iteration-count: infinite;
+                        -o-animation-iteration-count: infinite;
+                        -ms-animation-iteration-count: infinite;
+                        -webkit-animation-iteration-count: infinite;
+                        -moz-animation-iteration-count: infinite;
+
+                    animation-direction: normal;
+                        -o-animation-direction: normal;
+                        -ms-animation-direction: normal;
+                        -webkit-animation-direction: normal;
+                        -moz-animation-direction: normal;
+
+                    border-radius: 20px;
+                        -o-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                }
+                
+                #circle1 {
+                    animation-delay: 0.45s;
+                        -o-animation-delay: 0.45s;
+                        -ms-animation-delay: 0.45s;
+                        -webkit-animation-delay: 0.45s;
+                        -moz-animation-delay: 0.45s;
+                }
+                
+                #circle2 {
+                    animation-delay: 1.05s;
+                        -o-animation-delay: 1.05s;
+                        -ms-animation-delay: 1.05s;
+                        -webkit-animation-delay: 1.05s;
+                        -moz-animation-delay: 1.05s;
+                }
+                
+                #circle3 {
+                    animation-delay: 1.35s;
+                        -o-animation-delay: 1.35s;
+                        -ms-animation-delay: 1.35s;
+                        -webkit-animation-delay: 1.35s;
+                        -moz-animation-delay: 1.35s;
+                }
+                
+                @keyframes bounce_circle {
+                    0% {}
+                    50% { background-color:rgb(242,160,60) }
+                    100% {}
+                }
+                
+                @-o-keyframes bounce_circle {
+                    0% {}
+                    50% { background-color:rgb(242,160,60) }
+                    100% {}
+                }
+                
+                @-ms-keyframes bounce_circle {
+                    0% {}
+                    50% { background-color:rgb(242,160,60) }
+                    100% {}
+                }
+                
+                @-webkit-keyframes bounce_circle {
+                    0% {}
+                    50% { background-color:rgb(242,160,60) }
+                    100% {}
+                }
+                
+                @-moz-keyframes bounce_circle {
+                    0% {}
+                    50% { background-color:rgb(242,160,60) }
+                    100%{}
+                }
+
+                .user-main-info {
+                    display: flex;
+                    flex-direction: column;
+                    width: 60%;
+                    justify-content: center;
+                    padding: 16px 32px;
+
+                    .name {
+                        display: flex;
+                        flex-direction: row;
+
+                        h3 {
+                            margin-right: 8px;
+                            margin-bottom: 3px;
+                        }
+                    }
+
+                    h4 {
+                        margin: 0;
+                        margin-bottom: 16px;
+                    }
+
+                    h3 {
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+
+        .beer-data {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+
+            .block-name {
+                overflow: hidden;
+                border-right: .15em solid #f2a13c;
+                white-space: nowrap;
+                animation: typing 1.5s steps(20, end) forwards, blinking 1.8s infinite;
+                width: 0;
+            }
+              
+            @keyframes typing {
+                from { width:  0}
+                to { width: 115px }
+            }
+              
+            @keyframes blinking {
+                from { border-color: transparent }
+                to { border-color: #f2a13c; }
+            }
+  
+            h3 {
+                margin: 0;
+                margin-bottom: 16px;
+            }
+
+            .random-beer {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                height: 300px;
+                border: 2px solid #f2a13c;
+                border-radius: 5px;
+
+                img {
+                    height: 200px;
+                    align-self: center;
+                    margin-right: 64px;
+                    margin-left: auto;
+                }
+
+                .beer-main-info {
+                    display: flex;
+                    flex-direction: column;
+                    width: 60%;
+                    justify-content: center;
+                    padding: 16px 32px 16px 64px;
+
+                    h3, h4 {
+                        margin-top: 0;
+                        margin-bottom: 16px;
+                    }
+
+                    .brand {
+                        margin-top: 0;
+                        margin-bottom: 3px;
+                    }
+
+                    .alco {
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media ( max-width: 1024px ) {
+    .main-page {
+        .page-info {
+            padding-top: 64px;
+
+            .user-data {
+                width: 45%;
+
+                .random-user {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 350px;
+
+                    img {
+                        width: 130px;
+                        height: 130px;
+                        align-self: center;
+                        margin-left: 0;
+                        margin-bottom: 0;
+                        margin-top: 20px;
+                    }
+
+                    .img-box {
+                        height: 200px;
+                    }
+
+                    .circles {
+                        margin-top: 74px;
+                        margin-bottom: 54px;
+                    }
+
+                    .user-main-info {
+                        width: 80%;
+
+                        .last-block {
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+
+            .beer-data {
+                width: 45%;
+                
+                .random-beer {
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 350px;
+    
+                    img {
+                        height: 130px;
+                        align-self: center;
+                        margin-right: 0;
+                        margin-left: 0;
+                        margin-bottom: 16px;
+                        margin-top: 35px;
+                    }
+    
+                    .beer-main-info {
+                        width: 80%;
+                        justify-content: center;
+                        padding: 0;
+                        margin-bottom: 30px;
+    
+                        h3, h4 {
+                            margin-top: 0;
+                            margin-bottom: 16px;
+                        }
+
+                        .style {
+                            margin-bottom: 0;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media ( max-width: 600px ) {
+    .main-page {
+        .page-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 32px;
+            padding-bottom: 64px;
+
+            .user-data {
+                width: calc(100% - 4px);
+                margin-left: -4px;
+
+                .random-user {
+                    height: 350px;
+
+                    .img-box {
+                        height: 200px;
+                    }
+
+                    .user-main-info {
+                        padding: 16px;
+                    }
+
+                    img {
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+            }
+
+            .beer-data {
+                margin-top: 32px;
+                width: calc(100% - 4px);
+                margin-left: -4px;
+
+                .random-beer {
+                    height: 350px;
+                }
+            }
+        }
+    }
+    
+}
+
